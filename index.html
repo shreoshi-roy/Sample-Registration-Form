@@ -4,116 +4,219 @@
     <meta charset="utf-8">
     <title>AcadPrime</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Bootstrap JS scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <div class="container">
       <div class="row">
-          <div class="col-sm-8 col-md-6">
+          <div class="col-sm-8 col-md-6 main-container">
             <form action="mailto:shreoshiroy@gmail.com" method="post" enctype="text/plain">
 
               <img src="logo.png" class="logo">
-              <hr />
 
-              <div class="row">
-                <div class="col-sm-6 col-md-6">
-                  <div class="form-group">
-                    <input type="text" name="Name" class="form-control input-lg" placeholder="Full Name" value="" required="required" />
+              <!-- Tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#personal">Personal Details</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#contact">Contact Details</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#course">Course Details</a>
+                </li>
+              </ul>
+
+              <br />
+
+              <!-- Personal Tab -->
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="personal">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-6">
+                      <div class="form-group">
+                        <input type="text" name="FirstName" class="form-control input-lg" placeholder="First Name" value="" required="required" />
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6">
+                      <div class="form-group">
+                        <input type="text" name="LastName" class="form-control input-lg" placeholder="Last Name" value="" required="required" />
+                      </div>
+                    </div>
                   </div>
+
+                  <div class="row">
+                    <div class="col-sm-6 col-md-6">
+                      <div class="form-group">
+                        <select name="Gender" class="form-control input-lg" value="" required="required" />
+                          <option value="">Gender</option>
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                          <option value="Other">Other</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6">
+                      <div class="form-group">
+                        <input type="date" name="DOB" class="form-control input-lg" placeholder="Date of Birth" value="" required="required" />
+                      </div>
+                    </div>
+
+
+                    <div class="col-sm-12 col-md-12">
+                      <div class="form-group">
+                        <input type="text" name="School" class="form-control input-lg" placeholder="Last/Current School" value="" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr />
+                  <div class="row">
+                      <div class="col-md-6">
+                        <button class="btn btn-info btn-lg next btn-block">Next</button>
+                      </div>
+                  </div>
+
                 </div>
 
-                <div class="col-sm-6 col-md-6">
-                  <div class="form-group">
-                    <input type="text" name="MobileNumber" class="form-control input-lg" placeholder="Mobile Number" value="" required="required" />
+
+                <!-- Contact Tab -->
+                <div class="tab-pane fade" id="contact">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-6">
+                      <div class="form-group">
+                        <input type="text" name="MobileNumber" class="form-control input-lg" placeholder="Mobile Number" value="" required="required" />
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6">
+                      <div class="form-group">
+                        <input type="text" name="Area" class="form-control input-lg" placeholder="Area" value="" required="required" />
+                      </div>
+                    </div>
+
+
+                    <div class="col-sm-12 col-md-12">
+                      <div class="form-group">
+                        <input type="email" name="EmailID" class="form-control input-lg" placeholder="Email ID" value="" required="required"/>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr />
+                  <div class="row">
+                    <div class="col-md-6">
+                      <button class="btn btn-info btn-lg previous btn-block">Previous</button>
+                    </div>
+                    <div class="col-md-6">
+                      <button class="btn btn-info btn-lg next btn-block">Next</button>
+                    </div>
+                  </div>
+
+                </div>
+
+
+                <!-- Course Tab -->
+                <div class="tab-pane fade" id="course">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-6">
+                      <div class="form-group">
+                        <select name="Course" class="form-control input-lg" value="" required="required" />
+                          <option value="">Select Course</option>
+                          <option value="Prelims cum Mains">Prelims cum Mains</option>
+                          <option value="Optional">Optional</option>
+                          <option value="Test Series">Test Series</option>
+                          <option value="Online">Online</option>
+                          <option value="Degree cum IAS">Degree cum IAS</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6">
+                      <div class="form-group">
+                        <select name="Willing" class="form-control input-lg" value="" required="required" />
+                            <option value>Willing to Join</option>
+                            <option value="Current Batch">Current Batch</option>
+                            <option value="Enquiry">Enquiry</option>
+                            <option value="Next Batch">Next Batch</option>
+                            <option value="Next Year">Next Year</option>
+                        </select>
+                      </div>
+                    </div>
+
+
+
+                    <div class="col-sm-6 col-md-6">
+                      <div class="form-group">
+                        <select name="Online/Offline" class="form-control input-lg" value="" required="required" />
+                            <option value>Online/Offline</option>
+                            <option value="Online Classes">Online classes</option>
+                            <option value="Online Classes">Offline classes</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6">
+                      <div class="form-group">
+                        <select name="Branch" class="form-control input-lg" value="" required="required" />
+                            <option value>Select Branch</option>
+                            <option value="Ashok Vihar, Delhi"> Ashok Vihar, Delhi</option>
+                            <option value="Hauz Khas, Delhi">Hauz Khas, Delhi</option>
+                            <option value="Dilshad Garden, Delhi">Madhavpur, Hyderabad</option>
+                        </select>
+                      </div>
+                    </div>
+
+
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                      <div class="form-group">
+                        <select name="FromWhere" class="form-control input-lg" value="" /> <br />
+                            <option value>From where you came to know about AcadPrime?</option>
+                            <option value="Friend">Friend</option>
+                            <option value="Govt Officer Referred">Govt Officer Referred</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="You Tube"> You Tube</option>
+                            <option value="Website">Website</option>
+                            <option value="Banner">Banner or Hoarding</option>
+                            <option value="Flier">Flier</option>
+                            <option value="Other">Other</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-12">
+                      <div class="form-group">
+                        <textarea name="ExtraInfo" class="form-control input-lg" rows="5" cols="60" placeholder="Extra Info Description"></textarea>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr />
+                  <div class="row">
+                    <div class="col-md-6">
+                      <button class="btn btn-info btn-lg previous btn-block">Previous</button>
+                    </div>
+                    <div class="col-md-6">
+                      <input type="submit" value="Register" class="btn btn-primary btn-lg btn-block register" />
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="col-sm-12 col-md-12 single">
-                <div class="form-group">
-                  <input type="email" name="EmailID" class="form-control input-lg" placeholder="Email ID" value="" required="required"/>
-                </div>
-              </div>
 
-              <div class="row">
-                <div class="col-sm-6 col-md-6">
-                  <div class="form-group">
-                    <select name="Course" class="form-control input-lg" value="" required="required" />
-                      <option value="">Select Course</option>
-                      <option value="Prelims cum Mains">Prelims cum Mains</option>
-                      <option value="Optional">Optional</option>
-                      <option value="Test Series">Test Series</option>
-                      <option value="Online">Online</option>
-                      <option value="Degree cum IAS">Degree cum IAS</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-sm-6 col-md-6">
-                  <div class="form-group">
-                    <select name="Willing" class="form-control input-lg" value="" required="required" />
-                        <option value>Willing to Join</option>
-                        <option value="Current Batch">Current Batch</option>
-                        <option value="Enquiry">Enquiry</option>
-                        <option value="Next Batch">Next Batch</option>
-                        <option value="Next Year">Next Year</option>
-                        <option value="Online Classes">Online classes</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-sm-6 col-md-6">
-                  <div class="form-group">
-                    <input type="text" name="Area" class="form-control input-lg" placeholder="Area" value="" required="required" />
-                  </div>
-                </div>
-
-                <div class="col-sm-6 col-md-6">
-                  <div class="form-group">
-                    <select name="Branch" class="form-control input-lg" value="" required="required" />
-                        <option value>Select Branch</option>
-                        <option value="Ashok Vihar, Delhi"> Ashok Vihar, Delhi</option>
-                        <option value="Hauz Khas, Delhi">Hauz Khas, Delhi</option>
-                        <option value="Madhavpur, Hyderabad">Madhavpur, Hyderabad</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-sm-12 col-md-12 col-lg-12 single">
-                <div class="form-group">
-                  <select name="FromWhere" class="form-control input-lg" value="" /> <br />
-                      <option value>From where you came to know about AcadPrime?</option>
-                      <option value="Friend">Friend</option>
-                      <option value="Govt Officer Referred">Govt Officer Referred</option>
-                      <option value="Facebook">Facebook</option>
-                      <option value="You Tube"> You Tube</option>
-                      <option value="Website">Website</option>
-                      <option value="Banner">Banner or Hoarding</option>
-                      <option value="Flier">Flier</option>
-                      <option value="Other">Other</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="col-sm-12 col-md-12 single">
-                <div class="form-group">
-                  <textarea name="ExtraInfo" class="form-control input-lg" rows="5" cols="60" placeholder="Extra Info Description"></textarea>
-                </div>
-              </div>
-
-              <hr />
-              <div class="row">
-                  <div class="col-md-6">
-                    <input type="submit" value="Register" class="btn btn-primary btn-lg btn-block" />
-                  </div>
-              </div>
             </form>
           </div>
         </div>
       </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="index.js" charset="utf-8"></script>
   </body>
 </html>
