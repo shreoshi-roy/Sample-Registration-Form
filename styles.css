@@ -1,9 +1,38 @@
+body{
+  background-color: #d3f4ff;
+  padding-top: 2%;
+}
+
+form{
+  margin: 5%;
+}
+
+a{
+  color: #2e279d;
+}
+
 
 .logo{
   width: 300px;
-  margin: 0 20%;
+  margin: 0 20% 3% 20%;
 }
 
-.single{
+
+.main-container{
+  background-color: #dff6f0;
+  background-clip: content-box; /* <---- */
+  box-shadow: inset 0 0 0 10px #dff6f0; /* <-- 10px spread radius */
   padding: 0;
+  margin: 0 auto;
+}
+
+.nav-tabs .nav-item .active{
+  border-color: #2e279d #2e279d white #2e279d;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px 10px 0 0;
+}
+
+.register{
+  background-color: #2e279d;
 }
